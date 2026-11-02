@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pampişlerr hub - Key System</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            text-align: center;
+            width: 320px;
+            border: 1px solid #333;
+        }
+        h2 {
+            margin-bottom: 10px;
+            color: #4682b4;
+        }
+        p {
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .key-box {
+            background: #2a2a2a;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 16px;
+            color: #50b450;
+            margin-bottom: 20px;
+            border: 1px dashed #444;
+            user-select: all;
+        }
+        button {
+            background-color: #4682b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.2s;
+        }
+        button:hover {
+            background-color: #5a9be2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>pampişlerr hub</h2>
+        <p>Giriş yapmak için güncel Key:</p>
+        
+        <div class="key-box" id="keyText">yusufbaba123</div>
+        
+        <button onclick="copyKey()">Key'i Kopyala</button>
+    </div>
+
+    <script>
+        function copyKey() {
+            const keyElement = document.getElementById("keyText");
+            navigator.clipboard.writeText(keyElement.innerText);
+            alert("Key panoya kopyalandı kanka!");
+        }
+    </script>
+
+</body>
+</html>
